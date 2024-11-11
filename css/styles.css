@@ -9,18 +9,31 @@ header {
     background-color: #1D1F27;
     color: #fff;
     padding: 10px;
-    text-align: center;
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-img {
-    display: block;
     justify-content: center;
     align-items: center;
-    margin-left: 650px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header .logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+header img {
+    width: 150px; /* Ajuste o tamanho conforme necessário */
+}
+
+.icon {
+    margin-right: 20px; /* Margem leve da borda direita */
+    position: absolute;
+    right: 0;
+    margin-top: -8px;
 }
 
 footer {
@@ -28,7 +41,7 @@ footer {
     color: #fff;
     padding: 10px;
     text-align: center;
-    width: 100%;
+    width: 98.6%;
     height: 60px;
     display: flex;
     justify-content: center;
@@ -40,6 +53,55 @@ footer p {
     margin-top: 20px;
 }
 
-.icon {
-    margin-right: 50px;
+/* =================================================================  */
+
+/* Responsivo para tablets */
+@media (max-width: 768px) {
+    header {
+        padding: 8px;
+    }
+
+    header img {
+        width: 120px; /* Ajuste o tamanho do logo para telas menores */
+    }
+
+    .icon {
+        margin-right: 10px;
+        margin-top: -5px;
+    }
+
+    footer {
+        height: 50px;
+        padding: 8px;
+    }
+
+    footer p {
+        margin-top: 15px;
+    }
+}
+
+/* Responsivo para celulares */
+@media (max-width: 480px) {
+    header {
+        padding: 6px;
+    }
+
+    header img {
+        width: 100px; /* Ajuste o tamanho do logo para telas de celulares */
+    }
+
+    .icon {
+        width: 18px;
+        margin-right: 16px;
+        margin-top: -7px;
+    }
+
+    footer {
+        height: 40px;
+        padding: 6px;
+    }
+
+    footer p {
+        margin-top: 10px;
+    }
 }
